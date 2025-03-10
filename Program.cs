@@ -5,7 +5,9 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        var midiFile = MidiFile.Read("../../Music/test2.mid");
+        Console.Write("Enter a midi file path: ");
+        var filePath = Console.ReadLine();
+        var midiFile = MidiFile.Read(filePath);
         var trackNum = 0;
         var formatted = "";
         var tempoMap = midiFile.GetTempoMap();
